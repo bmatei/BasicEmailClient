@@ -1,0 +1,23 @@
+**********************************************************************************
+This project is made up of 4 classes and use several classes amongst two jar files.
+The source files are located under ./src/emailclient/
+The .jar files are located under ./libs/
+**********************************************************************************
+The main Graphical User Interface (GUI) is made at ClientGUI.java
+The pop-up dialog message for connecting to the server is at ConnectDialog.class
+The CustomTableModel.java is responsible for showing the email messages that make
+up your inbox
+The Credentials class is simply a collections of static (global) convenience functions
+whos sole purpose is to save and load the credentials (username and pass) information
+to and from a file (the server too).
+The javax.mail.jar is needed for the server conectivity utility (Java Mail API)
+The jsoup-1.8.1.jar is used to parse HTML in "text/html" email blocks for a clean
+looking text email.
+**********************************************************************************
+A possible command for building this project would be:
+javac -d build -cp libs/javax.mail.jar:libs/jsoup-1.8.1.jar:. src/emailclient/*.java
+
+Beware that building a project in an IDE and building it manually may have different
+results many times because IDE's have a habbit of adding their own convenient options
+to the compiler (like -g or -Xlint:none for instance)
+**********************************************************************************
